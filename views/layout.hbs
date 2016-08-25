@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <title>{{title}}</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+
+  <body>
+    <h1>BenIg's ToDoL1ST!!</h1>
+    <input type="text" id="toDoThis" placeholder="my To Do"></input>
+    <input type="button" id="submitThis"></input>
+        <div id="list"><div>
+        <div id="list2"></div>
+    {{{body}}}
+    <script>
+    $("#submitThis").click(function(){
+      $("#list").append("<div id='added'>" + $(toDoThis).val() + "</div><input type='button' id='delDiv'></input>")
+      $("#toDoThis").val("")
+      // $(this).click(function(){
+      //   alert("woop")
+      // })
+    })
+
+    </script>
+  </body>
+</html>
